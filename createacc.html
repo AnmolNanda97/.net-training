@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create your Google Account</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+        .main{
+            width:800px;
+            border: 1px solid rgba(185, 184, 184, 0.815);
+            margin-left:200px;
+            margin-top: 25px;
+            padding: 10px;
+            border-radius: 10px;
+           
+        }
+
+        aside{
+            background-color:white;
+                width: 60%;
+                padding:20px
+               
+        }
+        article{
+            background-color:white;
+                width: 40%;
+                margin-left: 5px;
+                
+        }
+        section{
+            display :inline-flex;
+                width:100%;
+                
+        }
+        .inputheight{
+            height: 20px;
+            border-radius: 5px;
+        }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="main">
+          <img src="C:\Training\Week1\Assignments\Google signup page\Google logo.png"></img>
+          <div style="text-align:left; font: bold,large;font-size: 30px;margin-left:45px; line-height: 0px;font-family:sans-serif">Create your Google Account</div>
+          <div style="text-align:left; font: bold,large;font-size: 20px;margin-left:47px; line-height: 65px;">to continue to Gmail</div>
+          <br>
+
+          <div class="outerDiv">
+              <section>
+              <aside>
+                  <div style="margin-left:40px;">
+                    
+                      <form method="POST" action="./createacc2.html">
+                          <input  type="text" class="inputheight" id="firstname" name="firstname" placeholder=" First Name" required>&emsp;
+                          <input  type="text" class="inputheight" name="lastname"  placeholder=" Last Name" required> 
+                          <br>
+                          <br>
+                          <br>
+                      
+
+                      
+                            <input  type="email" class="inputheight" name="username" placeholder="  UserName"  size="48" required>
+                            <br>
+                            <div style="font-size:13px">You can use letters,numbers & periods</div>
+
+                
+                                <br>
+                                <br>
+                                <br>
+                                <input class="inputheight"type="password" name="password" placeholder=" Password" required>&emsp;
+                                <input class="inputheight"type="password" name="confirm" placeholder=" Confirm" required> 
+                                <br>
+                               <h5 style="line-height: 20px"> Use 8 or more characters with a mix of letters, numbers & <br>symbols</h5>
+                                <br>
+                                <br>
+                                <br>
+                                <div style="margin-left: 300px">
+                                    <a href="createacc2.html"> 
+                                <input type="submit" name="next" value="Next" onclick="next()">
+                                </a>
+                                </div>
+                    
+                            </form>
+                        
+                        
+
+
+
+                  </div>
+                  
+                       
+                    
+
+              </aside>
+
+              <article>
+                  <div style="margin-left: 30px">
+                <img src="file:///C:/Training/Week1/Assignments/Google%20signup%20page/Creat%20acc%20logo.svg" width="250px"height="250px"></img>
+               </div>
+                <div style="font-size:20px;color:rgb(97, 94, 94);text-align: center">
+                        One account. All of Google<br> working for you.
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+     <!-- <input type="button" value="test" onclick="next()"/> -->
+    </body>
+    <!-- <script>
+     function next(){
+         var x=document.getElementById("firstname").value;
+        
+       if(x== "")
+       {
+           alert("please Enter the Name");
+       }
+     }
+    </script> -->
+</html>
