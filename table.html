@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Price List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style> 
+            td{
+               border: solid rgb(0, 19, 128);
+               width:400px;
+               height:30px;
+               text-align: center;
+           } 
+           body{
+               background-image: url("https://media.istockphoto.com/photos/supermarket-aisle-with-empty-green-shopping-cart-picture-id817240836?k=6&m=817240836&s=612x612&w=0&h=I_77CJZV_tl3kdN-R1yav7jIa4lOs4JgqZZH4OyXT_s=");
+               background-position: fixed;
+               background-repeat: no-repeat;
+               background-size:1300px;
+               background-position-x: 0px;
+               background-position-y: -80px;
+           }
+
+          
+        </style>
+    </head>
+
+    <body>
+
+     <h1 style="text-align: center; font-size: 80px;">Super Market</h1>
+
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-4">
+
+                 <div class="form-group">
+                   <label style="font-size:30px">Item</label>
+                   <input type="text" name="" id="item" class="form-control" placeholder=" Item Name" aria-describedby="helpId">
+                   <small id="helpId" class="text-muted"></small><br>
+
+                   <div class="form-group">
+                     <label style="font-size:30px">Quantity</label>
+                     <input type="text" name="" id="quantity" class="form-control" placeholder="Quantity" aria-describedby="helpId">
+                     <small id="helpId" class="text-muted"></small><br>
+
+                     <div class="form-group">
+                       <label style="font-size:30px">Price</label>
+                       <input type="text" name="" id="price" class="form-control" placeholder="Price" aria-describedby="helpId">
+                       <small id="helpId" class="text-muted"></small><br>
+
+                       <button type="button" class="btn btn-primary" onclick="calculate()">Add Item</button>
+                       
+                     </div>
+                   </div>
+                 </div>
+             </div>
+
+             <div class="col-lg-8">
+                 <table id="details" style="margin-top:50px; font-size: 25px; font:bold">
+                     <tbody>                     
+                        <tr >
+                          <td>Item</td>
+                          <td>Quantity</td>
+                          <td>Price</td>
+                          <td>Amount</td>
+                      </tr>
+                    </tbody>
+
+                 </table>
+                 <p style="font-size:60px"><b>Total Price:</b><span id="total"></span></p>
+             </div>
+         </div>
+     </div>
+
+
+     
+     <script>
+         var t=0;
+            function calculate()
+            {
+               var table = document.getElementById("details");
+               var row = table.insertRow(-1);
+               var cell1 = row.insertCell(0);
+               var cell2 = row.insertCell(1);
+               var cell3 = row.insertCell(2);
+               var cell4 = row.insertCell(3);
+               cell1.innerHTML = document.getElementById("item").value;
+               cell2.innerHTML = Number(document.getElementById("quantity").value);
+               cell3.innerHTML = Number(document.getElementById("price").value);
+               cell4.innerHTML = Number(cell2.innerHTML) * Number(cell3.innerHTML);
+
+                t=Number(cell4.innerHTML)+t;
+                document.getElementById("total").innerHTML=t;
+             }
+
+       </script>
+
+    
+    </body>
+</html>
