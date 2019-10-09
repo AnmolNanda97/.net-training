@@ -1,0 +1,29 @@
+<div class="main">
+<form>
+    
+        <div class="form-group">
+            <label for="deptid">Department ID:</label>
+            <input id="deptid" class="form-control" type="number" name="deptid" [(ngModel)]="dep.deptId">
+        </div>
+    
+        <div class="form-group">
+                <label for="name">Name:</label>
+                <input id="name" class="form-control" type="text" name="name" [(ngModel)]="dep.name">
+            </div>
+    
+            <div class="form-group">
+                    <label for="groupName">Group Name:</label>
+                    <input id="groupName" class="form-control" type="text" name="groupName" [(ngModel)]="dep.groupName">
+                </div>
+    
+                <div class="form-group">
+                        <label for="date">Modified Date:</label><br>
+                        <input type="date" name="date" id="date" [(ngModel)]="dep.modifiedDate">
+                        
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary" (click)="saveDept()">Submit</button>
+    
+    </form>
+</div>
+    
