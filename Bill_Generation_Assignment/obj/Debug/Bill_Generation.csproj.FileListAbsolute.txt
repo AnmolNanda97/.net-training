@@ -1,0 +1,6 @@
+C:\Users\ananda7\source\repos\Day 3\Bill_Generation\bin\Debug\Bill_Generation.exe.config
+C:\Users\ananda7\source\repos\Day 3\Bill_Generation\bin\Debug\Bill_Generation.exe
+C:\Users\ananda7\source\repos\Day 3\Bill_Generation\bin\Debug\Bill_Generation.pdb
+C:\Users\ananda7\source\repos\Day 3\Bill_Generation\obj\Debug\Bill_Generation.csprojAssemblyReference.cache
+C:\Users\ananda7\source\repos\Day 3\Bill_Generation\obj\Debug\Bill_Generation.exe
+C:\Users\ananda7\source\repos\Day 3\Bill_Generation\obj\Debug\Bill_Generation.pdb
