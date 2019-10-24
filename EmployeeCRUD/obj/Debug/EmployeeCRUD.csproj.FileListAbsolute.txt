@@ -1,0 +1,6 @@
+C:\Users\ananda7\source\repos\Day5\EmployeeCRUD\bin\Debug\EmployeeCRUD.exe.config
+C:\Users\ananda7\source\repos\Day5\EmployeeCRUD\bin\Debug\EmployeeCRUD.exe
+C:\Users\ananda7\source\repos\Day5\EmployeeCRUD\bin\Debug\EmployeeCRUD.pdb
+C:\Users\ananda7\source\repos\Day5\EmployeeCRUD\obj\Debug\EmployeeCRUD.csprojAssemblyReference.cache
+C:\Users\ananda7\source\repos\Day5\EmployeeCRUD\obj\Debug\EmployeeCRUD.exe
+C:\Users\ananda7\source\repos\Day5\EmployeeCRUD\obj\Debug\EmployeeCRUD.pdb
