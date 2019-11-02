@@ -1,0 +1,6 @@
+C:\Users\ananda7\source\repos\Product_Management\Program\bin\Debug\Program.exe.config
+C:\Users\ananda7\source\repos\Product_Management\Program\bin\Debug\Program.exe
+C:\Users\ananda7\source\repos\Product_Management\Program\bin\Debug\Program.pdb
+C:\Users\ananda7\source\repos\Product_Management\Program\obj\Debug\Program.csprojAssemblyReference.cache
+C:\Users\ananda7\source\repos\Product_Management\Program\obj\Debug\Program.exe
+C:\Users\ananda7\source\repos\Product_Management\Program\obj\Debug\Program.pdb
