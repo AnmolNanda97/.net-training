@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CountryStateModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CountryTable">
+    <Key>
+      <PropertyRef Name="country_id" />
+    </Key>
+    <Property Name="country_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="country_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StateTables" Relationship="Self.fk_sid" FromRole="CountryTable" ToRole="StateTable" />
+  </EntityType>
+  <EntityType Name="StateTable">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="country_id" Type="Int32" />
+    <NavigationProperty Name="CountryTable" Relationship="Self.fk_sid" FromRole="StateTable" ToRole="CountryTable" />
+  </EntityType>
+  <Association Name="fk_sid">
+    <End Role="CountryTable" Type="Self.CountryTable" Multiplicity="0..1" />
+    <End Role="StateTable" Type="Self.StateTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryTable">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="StateTable">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBFirstDemo" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CountryTables" EntityType="Self.CountryTable" />
+    <EntitySet Name="StateTables" EntityType="Self.StateTable" />
+    <AssociationSet Name="fk_sid" Association="Self.fk_sid">
+      <End Role="CountryTable" EntitySet="CountryTables" />
+      <End Role="StateTable" EntitySet="StateTables" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

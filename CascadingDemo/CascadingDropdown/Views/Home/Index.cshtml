@@ -1,0 +1,36 @@
+﻿@model CascadingDropdown.Models.Cascading
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cascading DropdownList Demo</h2>
+@if (ViewBag.Countries != null)
+{
+    @Html.DropDownList("ddlcountry", ViewBag.Countries as SelectList, "--select country--", new { @class = "form-control" })
+}
+
+@Html.DropDownListFor(m => m.Sid, new SelectList(""), "-- select State--", new { @class = "form-control" })
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ddlcountry").change(function () {
+            var countryid = document.getElementById("ddlcountry").value;
+          //  alert(countryid)
+            debugger
+            $.ajax({
+                type: "post",
+                url: "/Home/GetStates?cid=" + countryid,
+                contentType: "html",
+                success: function (response) {
+               //     debugger
+                    $("#Sid").empty();
+                    $("#Sid").append(response)
+                }
+            })
+        })
+    })
+
+</script>

@@ -1,0 +1,11 @@
+﻿@model CascadingDropdown.Models.StateTable
+
+<option>--select states--</option>
+@if (ViewBag.States != null)
+{
+    foreach (var item in ViewBag.States)
+    {
+        <option value="@item">@item.Text</option>
+    }
+}
+
