@@ -1,0 +1,109 @@
+# C:\Training\Python\Practice\Loops\Patterns.txt
+
+
+num=input("Enter the no. of lines = ")
+n=int(num)
+
+i=0
+while(i<n):
+	j=0
+	while(j<i+1):
+		print("*",end = " ")
+		j+=1
+	i+=1
+	print("\n")
+
+
+print("\n")
+print("\n")
+
+#________________________________________________________________
+
+
+i=0
+while(i<n):
+	j=n
+	while(j>i):
+		print("*",end = " ")
+		j-=1
+	i+=1
+	print("\n")
+
+print("\n")
+print("\n")
+
+#________________________________________________________________
+
+
+i=0
+while(i<n):
+	j=0
+	while(j<i):
+		print(" ",end = " ")
+		j+=1
+	j=n
+	while(j>i):
+		print("*",end = " ")
+		j-=1
+	i+=1
+	print("\n")
+
+print("\n")
+print("\n")
+
+
+#________________________________________________________________
+
+i=0
+while(i<n):
+	j=n-1
+	while(j>i):
+		print(" ",end = " ")
+		j-=1
+	j=0
+	while(j<i+1):
+		print("*",end = " ")
+		j+=1
+	i+=1
+	print("\n")
+
+print("\n")
+print("\n")
+
+
+#________________________________________________________________
+
+
+i=0
+while(i<n):
+	if(i%2==0):
+		j=n-1
+		while(j>i):
+			print(" ",end = " ")
+			j-=1
+		j=0
+		while(j<i+1):
+			print(" * ",end = " ")
+			j+=1
+		
+	if(i%2!=0):
+		j=n-1
+		while(j>i):
+			print(" ",end = " ")
+			j-=1
+		j=0
+		while(j<i+1):
+			print(" * ",end = " ")
+			j+=1
+		
+	i+=1
+	print("\n")
+#________________________________________________________________
+
+word="Python"
+for i in range(1,7):
+    print(" "*(7-i),word[0:i])
+
+
+
+	
